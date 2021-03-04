@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/eminer-js-sdk.iml" filepath="$PROJECT_DIR$/.idea/eminer-js-sdk.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/aurora-js-sdk.iml" filepath="$PROJECT_DIR$/.idea/aurora-js-sdk.iml" />
     </modules>
   </component>
 </project>

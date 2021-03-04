@@ -2,7 +2,7 @@
 
 ```javascript
 "dependencies": {
-  'aurorajs-tx': 'eminer/aurorajs-tx',
+  'aurorajs-tx': 'aurora/aurorajs-tx',
   ...
 }
 ```
@@ -16,19 +16,19 @@ const privateKey = Buffer.from('e331b6d69882b4cb4ea581d88e0b604039a3de5967688d3d
 const chainId = 1
 
 function EMtoHex(address) {
-    return address.replace(/^EM/, '0x')
+    return address.replace(/^AOA/, '0x')
 }
 
 const txParams = {
   nonce: '0x00',
   gasPrice: '0x09184e72a000', 
   gasLimit: '0x2710',
-  to: EMtoHex('EM0000000000000000000000000000000000000000'), 
+  to: AOAtoHex('AOA0000000000000000000000000000000000000000'), 
   value: '0x00', 
   data: '0x7f7465737432000000000000000000000000000000000000000000000000000000600057',
   action: 0, // 0 for regular/asset transaction, 6 for call contract
-  asset: EMtoHex('EM0000000000000000000000000000000000000000'), //asset id, use it when asset transaction
-  subAddress: 'EM140e0b100bc3c5820a5d5ed3cf94d54491f51a2fb590033560f603659600033565733600' // subAddress,use it when need subAddress
+  asset: AOAtoHex('AOA0000000000000000000000000000000000000000'), //asset id, use it when asset transaction
+  subAddress: 'AOA140e0b100bc3c5820a5d5ed3cf94d54491f51a2fb590033560f603659600033565733600' // subAddress,use it when need subAddress
 
 const tx = new AuroraTx(txParams)
 tx.sign(privateKey, chainId)
